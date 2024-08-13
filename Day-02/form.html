@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('https://img.freepik.com/free-vector/realistic-style-technology-particle-background_23-2148426704.jpg') no-repeat center center fixed;
+            background-size: cover;
+            padding: 20px;
+            color: #fff;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            color: #ffeb3b;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-collapse: collapse;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #800080;
+            color: #fff;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        td {
+            font-size: 14px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 4px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="date"]:focus,
+        select:focus {
+            border-color: #ffeb3b;
+            outline: none;
+            box-shadow: 0 0 5px rgba(255, 235, 59, 0.5);
+        }
+        .submit-button {
+            text-align: center;
+        }
+        input[type="submit"] {
+            background-color: #FF0000;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        input[type="submit"]:hover {
+            background-color: #000000;
+        }
+    </style>
+    <script>
+        function showSuccessMessage(event) {
+            event.preventDefault();
+            alert("You have successfully registered!");
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <h1>Registration Form</h1>
+        <form action="#" method="post" onsubmit="showSuccessMessage(event)">
+            <table>
+                <tr>
+                    <th><label for="firstName">First Name</label></th>
+                    <td><input type="text" id="firstName" name="firstName" required></td>
+                </tr>
+                <tr>
+                    <th><label for="lastName">Last Name</label></th>
+                    <td><input type="text" id="lastName" name="lastName" required></td>
+                </tr>
+                <tr>
+                    <th><label for="email">Email</label></th>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <th><label for="password">Password</label></th>
+                    <td><input type="password" id="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <th><label for="dob">Date of Birth</label></th>
+                    <td><input type="date" id="dob" name="dob" required></td>
+                </tr>
+                <tr>
+                    <th><label for="gender">Gender</label></th>
+                    <td>
+                        <select id="gender" name="gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="country">Country</label></th>
+                    <td><input type="text" id="country" name="country" required></td>
+                </tr>
+                <tr>
+                    <th><label for="phone">Phone Number</label></th>
+                    <td><input type="text" id="phone" name="phone" required></td>
+                </tr>
+                <tr class="submit-button">
+                    <td colspan="2"><input type="submit" value="Register"></td>
+                </tr>
+            </table>
+        </form>
+    </main>
+</body>
+</html>
+
+
